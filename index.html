@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"><title>Iron Crown: The Last Fortress</title><link rel="stylesheet" href="style.css"></head><body><div id="app">
+
+<div id="title">
+<svg viewBox="0 0 360 150" style="margin-bottom:6px"><defs><linearGradient id="ts" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f1218"/><stop offset=".7" stop-color="#c8662a"/><stop offset="1" stop-color="#e8a04a"/></linearGradient><pattern id="wn" width="9" height="9" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="3" height="3" fill="#f0b850"/></pattern></defs><rect width="360" height="150" fill="url(#ts)"/><path d="M0 120 L40 85 L70 105 L110 70 L150 110 L200 95 L360 125 V150 H0Z" fill="#1a1410"/><ellipse cx="70" cy="34" rx="16" ry="5" fill="#1a1410"/><ellipse cx="140" cy="58" rx="11" ry="3.5" fill="#1a1410"/><g fill="#14100c"><rect x="190" y="70" width="150" height="62"/><rect x="215" y="48" width="60" height="24"/><rect x="232" y="30" width="14" height="18"/><path d="M300 60 L352 34 L355 41 L306 68Z"/></g><rect x="190" y="48" width="150" height="84" fill="url(#wn)" opacity=".6"/><rect y="132" width="360" height="18" fill="#0e0b08"/><text x="352" y="12" text-anchor="end" fill="#e8dcc4" font-size="8">v0.3.0 Android</text></svg><div class="logo">IRON CROWN</div><div class="logo2">THE LAST FORTRESS</div><p class="sub">Ashlands, 1897</p>
+<div class="card">One year after the fall of Veyra, Commander Elias Vane takes command of the damaged Iron Crown. Between you and the Aureate Empire stands one enemy fortress on the northern rail corridor.</div>
+<div class="card"><small>Prototype Stage 1: one battle. Tap rooms for status. Tap an enemy room to target it. Pause any time to give orders.</small></div>
+<button class="btn big" id="play">&#9654; PLAY</button><button class="btn big" disabled style="font-size:15px">Continue (not built yet)</button><button class="btn big" disabled style="font-size:15px">Load Game (not built yet)</button><button class="btn big" disabled style="font-size:15px">Settings (not built yet)</button><p class="sub" style="margin-top:14px">A fallen republic. A stolen future. One last fortress.</p>
+</div>
+
+<div id="game" class="hidden">
+<div class="hull"><div><b>IRON CROWN</b><div class="bar"><i id="hbp"></i></div><small id="htp"></small></div><div style="text-align:right"><b>VANGUARD</b><div class="bar r"><i id="hbe"></i></div><small id="hte"></small></div></div>
+<div id="main">
+<div id="left"><div id="stage"><svg id="svg" viewBox="0 0 360 230"></svg><div id="over" class="hidden">PAUSED &middot; orders active</div></div></div>
+<div id="right">
+<div class="card" id="info"></div>
+<div class="lbl">Weapon</div><div class="row" id="weapons"><button class="btn" data-k="shell">Shell</button><button class="btn" data-k="rapid">Rapid</button><button class="btn" data-k="lob">Lobber</button><button class="btn" data-k="siege">Siege</button></div>
+<div class="lbl">Calibration</div><div class="row" id="presets"><button class="btn" data-k="quick">Quick</button><button class="btn" data-k="bal">Balanced</button><button class="btn" data-k="prec">Precision</button></div>
+<div class="row"><button class="btn" id="mode">Fire: Auto</button><button class="btn" id="fire">FIRE</button></div>
+<div id="aim" class="hidden"><i class="sweet"></i><i id="needle"></i></div>
+<div class="row"><button class="btn" id="rep">Repair selected</button><button class="btn" id="speed">Speed 1x</button><button class="btn" id="pause">Pause</button></div>
+<div class="row"><button class="btn hidden" id="quit">Quit to menu</button></div>
+<div class="card" id="log"></div>
+</div></div></div>
+<div id="result" class="hidden">
+<h1 id="rtitle"></h1><p class="sub" id="rtext"></p>
+<div class="card" id="rstats"></div>
+<button class="btn big" id="restart">RESTART BATTLE</button>
+</div>
+</div>
+<script src="game.js"></script></body></html>
